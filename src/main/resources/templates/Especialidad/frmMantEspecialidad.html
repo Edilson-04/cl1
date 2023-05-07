@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link th:href="@{/css/bootstrap/bootstrap.min.css}" rel="stylesheet">
+<script th:src="@{/js/bootstrap/bootstrap.bundle.js}" type="text/javascript"></script>
+</head>
+<body>
+
+<nav th:insert="layaout::nav"></nav>
+
+<table class="table">
+<thead>
+<tr>
+<th scope="col">id especialidad</th>
+<th scope="col">nomesp</th>
+<th scope="col">costo</th>
+</tr>
+</thead>
+
+<tbody>
+<tr th:each="especialidad :${listaespecialidad}">
+<th th:text="${especialidad.idespecialidad}"></th>
+<th th:text="${especialidad.nomesp}"></th>
+<th th:text="${especialidad.costo}"></th>
+</tr>
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+
+
+</body>
+</html>
