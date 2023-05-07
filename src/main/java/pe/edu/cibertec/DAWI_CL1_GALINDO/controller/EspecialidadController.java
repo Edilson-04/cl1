@@ -19,8 +19,15 @@ public class EspecialidadController {
 	@GetMapping("/frmMantEspecialidad")
 	public String frmMantEspecialidad(Model model) {
 		model.addAttribute("listaespecialidad", especialidadService.listarEspecialidad());
-		return "Estado/frmMantEspecialidad";
+		return "Especialidad/frmMantEspecialidad";
 	}
+	
+	@GetMapping("/frmRegEspecialidad")
+	public String frmRegEspecialidad(Model model) {
+		return "Especialidad/frmRegEspecialidad";
+	}
+	
+	
 	
 
 }
